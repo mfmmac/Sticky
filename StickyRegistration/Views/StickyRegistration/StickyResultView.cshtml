@@ -8,47 +8,27 @@
 
 <hr />
 
-<div style="        
-        overflow: hidden;
-        /*font-size: 100%;
-        background: #ffc;
-        display: block;
-        height: 250px;
-        width: initial;
-        padding: 10px;*/
-        height: 250px;
-        width: 250px;
-        background-color: #fff98e;
-         border: 6px solid #4CAF50;
-        font-size: 14px;
-    ">
-    <div class="row">
-        <div class="col-md-4">
-            <ul>
-                <li>
-                    <span>Title - @Model.Title </span>
-                </li>
-                <li>
-                    <span>Description - @Model.Description</span>
-                </li>
-                <li>
-                    <span>Date - @Model.Date</span>
-                </li>
-                <li>
-                    <span>Address - @Model.Address</span>
-                </li>
-                <li>
-                    <span>Name - @Model.Name</span>
-                </li>
-               
-                    <p>@Model.Result</p>
-                
-            </ul>
-        </div>
-        
+<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+    <div class="card-header">@Model.Title</div>
+    <div class="card-body">
+        <p class="card-text">
+        <p>
+            <span>Category - @Model.Category</span>
+        </p>
+        <p>
+            <span>Description - @Model.Description</span>
+        </p>
+        <p>
+            <span>Date - @Model.Date</span>
+        </p>
+        <p>
+            <span>Address - @Model.Address</span>
+        </p>
+        <p>
+            <span>Name - @Model.Name</span>
+        </p>
     </div>
 </div>
-
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -14,6 +14,7 @@ namespace StickyRegistration.Services
             return new StickyRegistrationResultViewModel
             {
                 Title = viewModel.Title,
+                Category = viewModel.Category,
                 Description = viewModel.Description,
                 Date = viewModel.Date,
                 Address = viewModel.Address,

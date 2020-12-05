@@ -6,6 +6,7 @@ namespace StickyRegistration.Controllers
 {
     public class StickyRegistrationController : Controller
     {
+
         private readonly IStickyService _stickyService;
         public StickyRegistrationController(IStickyService stickyService)
         {
