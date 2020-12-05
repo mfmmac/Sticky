@@ -13,17 +13,16 @@ namespace StickyRegistration.Models
     {
         public int ID { get; set; }
 
+        [StringLength(50)]
         [Required(ErrorMessage = "Title is required")]
         public string Title { get; set; }
 
         [Required(ErrorMessage = "Category is required")]
         public CategoryList Category { get; set; }
 
+        [StringLength(200)]
         [Required(ErrorMessage = "Description is required")]
         public string Description { get; set; }
-
-        [UIHint("LoudDateTime")]
-        public DateTime Date { get; set; }
 
         [Required(ErrorMessage = "Address is required")]
         public string Address { get; set; }

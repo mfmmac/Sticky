@@ -17,9 +17,11 @@
         </p>
         <p>
             <span>Description - @Model.Description</span>
+
+
         </p>
         <p>
-            <span>Date - @Model.Date</span>
+            <span>Date - @DateTime.Now</span>
         </p>
         <p>
             <span>Address - @Model.Address</span>
@@ -29,6 +31,16 @@
         </p>
     </div>
 </div>
+
+<body>
+
+    <div class="container">
+        <div class="alert alert-success">
+            <strong>Success!</strong>@Model.Result
+        </div>
+    </div>
+
+</body>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

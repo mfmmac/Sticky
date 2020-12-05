@@ -16,7 +16,6 @@ namespace StickyRegistration.Services
                 Title = viewModel.Title,
                 Category = viewModel.Category,
                 Description = viewModel.Description,
-                Date = viewModel.Date,
                 Address = viewModel.Address,
                 Name = viewModel.Name,
                 Result = viewModel.Title + " has been registered."
