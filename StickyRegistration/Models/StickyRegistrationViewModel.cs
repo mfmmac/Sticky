@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace StickyRegistration.Models
 {
+    //Setting char limit and making user inputs required
+    //Category List enum
+
     public class StickyRegistrationViewModel 
     {
         public int ID { get; set; }

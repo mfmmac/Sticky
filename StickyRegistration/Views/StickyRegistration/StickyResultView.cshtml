@@ -1,5 +1,6 @@
 ﻿@model StickyRegistration.Models.StickyRegistrationResultViewModel
 
+@*Pulling Information from RegistrationResultViewModel*@
 @{
     ViewData["Title"] = "StickyRegistrationResultView";
 }
@@ -7,12 +8,13 @@
 <h1>Sticky Registration Result</h1>
 
 <hr />
-
+@*Card BootStrap*@
 <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
     <div class="card-header">@Model.Title</div>
     <div class="card-body">
         <p class="card-text">
         <p>
+            @*Bringing in StickyRegistrtaionResultView*@
             <span>Category - @Model.Category</span>
         </p>
         <p>
@@ -21,6 +23,7 @@
 
         </p>
         <p>
+            @*Getting Current Time*@
             <span>Date - @DateTime.Now</span>
         </p>
         <p>
@@ -32,6 +35,7 @@
     </div>
 </div>
 
+@*MessageBox Displaying Result*@
 <body>
 
     <div class="container">

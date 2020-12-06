@@ -1,5 +1,7 @@
 ﻿@model StickyRegistration.Models.StickyRegistrationViewModel
 
+@*Getting user input and sending it to StickyRegistrationViewModel*@
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -17,6 +19,7 @@
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
 
+            @*Category dropdownlist from enum*@
             <div class="form-group">
                 <label asp-for="Category" class="control-label"></label>
                 @Html.DropDownListFor(m => m.Category, new SelectList(Enum.GetValues(typeof(CategoryList))), "Select Category")

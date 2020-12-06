@@ -7,6 +7,8 @@ namespace StickyRegistration.Services
         StickyRegistrationResultViewModel Sticky(StickyRegistrationViewModel viewModel);
     }
 
+
+    //Taking information from StickyRegistrationViewModel and bringing it to StickyRegistrationResultViewModel
     public class StickyService : IStickyService
     {
         public StickyRegistrationResultViewModel Sticky(StickyRegistrationViewModel viewModel)
