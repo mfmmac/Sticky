@@ -1,51 +1,156 @@
 ﻿@model StickyRegistration.Models.StickyRegistrationResultViewModel
-
 @*Pulling Information from RegistrationResultViewModel*@
 @{
     ViewData["Title"] = "StickyRegistrationResultView";
 }
 
-<h1>Sticky Registration Result</h1>
+<head>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+           
+        }
+        .btn {
+            background-color: #f4511e;
+            border: none;
+            color: white;
+            padding: 8px 32px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            opacity: 1;
+            transition: 0.3s;
+        }
 
-<hr />
-@*Card BootStrap*@
-<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-    <div class="card-header">@Model.Title</div>
-    <div class="card-body">
-        <p class="card-text">
-        <p>
-            @*Bringing in StickyRegistrtaionResultView*@
-            <span>Category - @Model.Category</span>
-        </p>
-        <p>
-            <span>Description - @Model.Description</span>
+            .btn:hover {
+                opacity: 0.6
+            }
 
 
-        </p>
-        <p>
-            @*Getting Current Time*@
-            <span>Date - @DateTime.Now</span>
-        </p>
-        <p>
-            <span>Address - @Model.Address</span>
-        </p>
-        <p>
-            <span>Name - @Model.Name</span>
-        </p>
-    </div>
-</div>
-
-@*MessageBox Displaying Result*@
+    </style>
+</head>
 <body>
 
-    <div class="container">
-        <div class="alert alert-success">
-            <strong>Success!</strong>@Model.Result
+    <h1>Sticky Registration Result</h1>
+
+    <hr />
+    @*Card BootStrap*@
+
+<div class="flex-container">
+    <div class="card-columns">
+        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+            <div class="card-header">@Model.Title</div>
+            <div class="card-body">
+                <p class="card-text">
+                <p>
+                    <span>Category - @Model.Category</span>
+                </p>
+                <p>
+                    <span>Description - @Model.Description</span>
+                </p>
+                <p>
+                    <span>Date Posted - @DateTime.Now.ToString("MM/dd/yyyy")</span>
+                </p>
+                <p>
+                    <span>Address - @Model.Address</span>
+                </p>
+                <p>
+                    <span>Name - @Model.Name</span>
+                </p>
+            </div>
+            <button class="btn">Check Out</button>
+        </div>
+
+        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Primary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Secondary card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Success card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Danger card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Warning card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Info card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card bg-light mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Light card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+                <h5 class="card-title">Dark card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
         </div>
     </div>
-
+    </div>
 </body>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @*MessageBox Displaying Result*@
+    <body>
+
+        <div class="container">
+            <div class="alert alert-success">
+                <strong>Success! @Model.Title has been Registered</strong>
+            </div>
+        </div>
+
+    </body>
+
+    <script>
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
